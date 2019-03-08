@@ -1,0 +1,527 @@
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Panduan menggunakan universal analytics untuk pertama kali | Thoughts The Analytics</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="../assets/built/screen.css?v=f834a093d3">
+
+    <meta name="description" content="Penjelasan mengenai universal analytic meliputi: deskripsi, manfaat, serta panduan cara menggunakannya di Google Analytics.">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="canonical" href="https://gtagjs.com/panduan-migrasi-dari-classic-analytics-ke-universal-analytics/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="https://gtagjs.com/panduan-migrasi-dari-classic-analytics-ke-universal-analytics/amp/">
+    
+    <meta property="og:site_name" content="GtagJS">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Panduan menggunakan universal analytics untuk pertama kali">
+    <meta property="og:description" content="Mengenal keunggulan universal analytics dari Google analytic beserta cara bermigrasi ke layanan tersebut. Tidak lupa, dijelaskan pula bagaimana memonitor web dengan layanan tersebut.">
+    <meta property="og:url" content="https://gtagjs.com/panduan-migrasi-dari-classic-analytics-ke-universal-analytics/">
+    <meta property="og:image" content="https://gtagjs.com/content/images/2019/03/family_time_2x-1.png">
+    <meta property="article:published_time" content="2018-07-08T00:02:23.000Z">
+    <meta property="article:modified_time" content="2019-03-06T03:00:14.000Z">
+    <meta property="article:tag" content="Tutorials">
+    <meta property="article:tag" content="Google Analytic">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Panduan menggunakan universal analytics untuk pertama kali">
+    <meta name="twitter:description" content="Mengenal keunggulan universal analytics dari Google analytic beserta cara bermigrasi ke layanan tersebut. Tidak lupa, dijelaskan pula bagaimana memonitor web dengan layanan tersebut.">
+    <meta name="twitter:url" content="https://gtagjs.com/panduan-migrasi-dari-classic-analytics-ke-universal-analytics/">
+    <meta name="twitter:image" content="https://gtagjs.com/content/images/2019/03/family_time_2x-1.png">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Fathul Mundzir">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Tutorials, Google Analytic">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="600">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "GtagJS",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://gtagjs.com/content/images/2019/03/99d9cc7667f91e05f58a0ada99ba2710.jpeg",
+            "width": 60,
+            "height": 60
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Fathul Mundzir",
+        "url": "https://gtagjs.com/author/fathul/",
+        "sameAs": []
+    },
+    "headline": "Panduan menggunakan universal analytics untuk pertama kali",
+    "url": "https://gtagjs.com/panduan-migrasi-dari-classic-analytics-ke-universal-analytics/",
+    "datePublished": "2018-07-08T00:02:23.000Z",
+    "dateModified": "2019-03-06T03:00:14.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://gtagjs.com/content/images/2019/03/family_time_2x-1.png",
+        "width": 800,
+        "height": 600
+    },
+    "keywords": "Tutorials, Google Analytic",
+    "description": "Mengenal keunggulan universal analytics dari Google analytic beserta cara bermigrasi ke layanan tersebut. Tidak lupa, dijelaskan pula bagaimana memonitor web dengan layanan tersebut.",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://gtagjs.com/"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 2.16">
+    <link rel="alternate" type="application/rss+xml" title="GtagJS" href="https://gtagjs.com/rss/">
+
+</head>
+<body class="post-template tag-tutorials tag-google-analytic">
+
+    <div class="site-wrapper">
+
+        
+
+<header class="site-header outer">
+    <div class="inner">
+        <nav class="site-nav" style="font-weight:600;">
+    <div class="site-nav-left">
+                <a class="site-nav-logo" href="https://gtagjs.com"><img src="https://gtagjs.com/content/images/2019/03/99d9cc7667f91e05f58a0ada99ba2710.jpeg" alt="GtagJS"></a>
+            <ul class="nav" role="menu">
+    <li class="nav-beranda" role="menuitem"><a href="https://gtagjs.com/">Beranda</a></li>
+    <li class="nav-tentang" role="menuitem"><a href="https://gtagjs.com/about/">Tentang</a></li>
+    <li class="nav-layanan" role="menuitem"><a href="https://gtagjs.com/">Layanan</a></li>
+</ul>
+
+    </div>
+    <div class="site-nav-right">
+        <div class="social-links">
+        </div>
+            <a class="subscribe-button" href="index.html#subscribe">Subscribe</a>
+    </div>
+</nav>
+    </div>
+</header>
+
+
+<main id="site-main" class="site-main outer">
+    <div class="inner">
+
+        <article class="post-full post tag-tutorials tag-google-analytic ">
+
+            <header class="post-full-header" style="display: none;">
+                <section class="post-full-meta">
+                    <time class="post-full-meta-date" datetime="2018-07-08">8 July 2018</time>
+                        <span class="date-divider">/</span> <a href="../tag/tutorials/">Tutorials</a>
+                </section>
+                <h1 class="post-full-title">Tata cara migrasi dari classic analytics ke universal analytics</h1>
+            </header>
+
+            <figure class="post-full-image" style="height: 349px;">
+                <img srcset="https://gtagjs.com/content/images/size/w300/2019/03/family_time_2x-1.png 300w,
+                            https://gtagjs.com/content/images/size/w600/2019/03/family_time_2x-1.png 600w,
+                            https://gtagjs.com/content/images/size/w1000/2019/03/family_time_2x-1.png 1000w,
+                            https://gtagjs.com/content/images/size/w2000/2019/03/family_time_2x-1.png 2000w" sizes="(max-width: 800px) 400px,
+                            (max-width: 1170px) 700px,
+                            1400px" src="https://gtagjs.com/content/images/size/w2000/2019/03/family_time_2x-1.png" alt="Tata cara migrasi dari classic analytics ke universal analytics">
+            </figure>
+
+            <section class="post-full-content" style="border-radius: 8px;">
+                <div class="post-content" style="font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif;font-size: 1.7rem;font-weight: 200;letter-spacing: 0.7px;line-height: 1.5;width: 80%;margin-left: 10%;">
+                    <h1 class="post-full-title" style="text-align: center">Tata cara migrasi dari classic analytics ke universal analytics</h1>
+                    <div class="meta-data-9908" style="font-size: 13px;">
+                        <time style="font-size: 13px;" class="post-full-meta-date" datetime="2018-07-08">8 July 2018</time>
+                            <span style="font-size: 13px;" class="date-divider">/</span> <a style="font-size: 13px;" href="../tag/tutorials/">Tutorials</a>
+                    </div>
+                    <hr>
+                    <p>GA merilis layanan universal analytics. Apa manfaat dan bagaimana cara menerapkannya pada <em>dashboard</em> GA?</p><p>Universal analytic merupakan generasi baru Google analytics. Meski sudah dirilis sejak 2012, saya masih sangat antusias untuk membagikan panduan mengenai hal ini. Kenapa demikian? Karena UA <em>[baca: universal analytics]</em> memiliki 7 fitur serta 4 fitur tambahan yang akan segera dirilis, di antaranya: </p><p><strong>Standard website metrics.</strong> Semua metrik favorit kita ada di dalam layanan ini, misal: visitors, visits, pageviews, time, dst. Selain itu, informasi standart seperti  geographic location, referral sources, marketing campaigns, dst pun ada di dalamnya.</p><p><strong>Ecommerce tracking.</strong> Meski baru, kita tetap bisa mengoleksi data transaksi ecommerce dengan layanan Universal Analytics ini.</p><p><strong>Event tracking.</strong> Fitur ini amat sangat berguna bagi kita untuk men-<em>tracking</em> beragam jenis interaksi audiencs dengan web atau app, misal: reading article.</p><p><strong>AdWords Linking</strong>. Sama halnya dengan classic analytics, kita tetap bisa menghubungkan AdWords account (atau mulitple accounts) dengan Universal Analytics.</p><p><strong>Custom Variables. </strong>Custom variables diganti dengan fitur baru bernama Custom Dimensions. Ada 2 perbedaan mendasar di antara keduanya. Pertama, kita memperoleh tambahan hingga 20 custom dimensions. Kedua, kita hanya butuh skill coding yang minim untuk menerapkan custom dimension di webb atau app. </p><p><strong>Custom Metrics. </strong>Ini merupakan layanan baru yang ada di dalam fitur custom dimensions. Di dalamnya, kita akan bisa melakukan pengaturan spesifik terhadap web atau app kita.</p><p><strong>Easier configuration.</strong> Keunggulan utama layanan GA Universal analytics yaitu mengenai perdorma server. Di masa depan, kita tidak lagi memerlukan kustomisasi JavaScript code. Alasannya, proses integrasi web atau app dengan search engine akan diterapkan secara default.</p><p>Selain 7 fitur itu, Universal analytic pun ditengarai akan menambahkan beberapa fitur lainnya, yaitu:</p><p><strong>Content Experiments.</strong> Di awal rilis, Universal Tracking code tidak mendukung terhadap Content Experiments. Bilamana ingin mendapatkan data dari fitur Content Experiments audiens, maka kita perlu menunggu hingga UA <em>[baca: universal analytic]</em> mendukung layanan tersebut.</p><p><strong>Remarketing with Google Analytics.</strong> Harus kita akui, ini adalah layanan favorit bagi semua digital analytic. Sayangnya, fitur ini belum kita pakai di UA.</p><p><strong>AdSense Integration.</strong> Sebelumnya, kita bisa meng-import AdSense data, seperti revenue, ke dalam Google Analytics. Sayangnya, untuk menikmati fitur ini di UA, kita perlu menunggu beberapa waktu ke depan. </p><p><strong>Cross device tracking.</strong> Ini akan jadi komponen terpenting di UA. Layanan ini diperkirakan akan membantu para digital analytic untuk lebih memahami audiens. Sayangnya, kita perlu menunggu beberapa waktu ke depan supaya bisa mendapat manfaatnya.</p><!--kg-card-begin: hr--><hr><!--kg-card-end: hr--><h2 id="-baru-javascript-tracking-code">[Baru] JavaScript Tracking Code</h2><p>Ada satu hal lagi yang membuat UA berbeda dengan GA sebelumnya, yaitu soal kode tracking JavaScript. UA tidak lagi memakai kode script lama bernama <code>ga.js</code>, melainkan memakai script code bernama <code>analytics.js</code>.</p><p>Kode script ini bisa diimplementasikan di web, mobile apps, dan device jenis lainnya. Untuk saat ini, kita bisa mendapatkan kode script baru ini di Admin Section dashboard GA.</p><!--kg-card-begin: image--><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://gtagjs.com/content/images/2018/07/1_TrackingCodeForSites.png" class="kg-image"><figcaption>Masukkan kode script UA ini ke dalam halaman web atau screenname apps</figcaption></figure><!--kg-card-end: image--><p>Agar web atau apps kita bisa termonitor di layanan UA, maka tempatkan kode ini di dalam section <code>&lt;head&gt;</code> dan <code>&lt;/head&gt;</code>.</p><!--kg-card-begin: image--><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://gtagjs.com/content/images/2018/07/3_CodeLocation.png" class="kg-image"><figcaption>Tempatkan kode script di dalam section head</figcaption></figure><!--kg-card-end: image--><p>Selanjutnya, kita akan memperoleh data berupa:</p><ul><li>Visitor count</li><li>Number of visits</li><li>Pageviews</li><li>Geographic location of your visitors</li><li>Referral information</li><li>Device information</li></ul><p>Namun, data tersebut tidak langsung kita terima setelah memasukkan <em>script tracking</em>. Setidaknya, kita harus menunggu antara 4 hingga 24 jam. Setelahnya, kita bisa memperoleh data secara <em>realtime</em>.</p><p>Secara lebih jelas, kode <em>tracking</em> UV kurang lebih akan terlihat seperti demikian:</p><!--kg-card-begin: code--><pre><code>&lt; script &gt;
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-YYYYY-XX', 'namadomain.com');
+ga('send', 'pageview')
+&lt; /script &gt;;</code></pre><!--kg-card-end: code--><p>Bisa jadi, pada bagian <code>UA-YYYYY-XX</code> dan <code>namadomain.com</code> akan berbeda. Keduanya berubah sesuai web atau app kita.</p><p>Sebagai tambahan informasi, <em>script code</em> di atas terdiri dari 2 bagian yang termuat di dalamnya:<br><strong>Pertama.</strong> Sebelumnya, kode script ini bernama <code>ga.js</code>, tetapi berubah menjadi <code>analytics.js</code>. Oleh sebab itu, bagian pertama ini bertugas memberitahu kepada web library kita bahwa nama kode <em>script</em> berubah, dari <code>ga.js</code> menjadi <code>analytics.js</code>.</p><!--kg-card-begin: code--><pre><code>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');</code></pre><!--kg-card-end: code--><p>Apabila diperhatikan kembali, <code>analytics.js</code> ternyata tidak memuat <em>ecommerce code</em> sama sekali. Pada UV, <em>ecommerce code</em> sengaja di-split (dibuat terpisah) untuk mempercepat load situs. Lalu, dimana meletakkan <em>ecommerce code</em>? Kode ini akan ditempatkan di halaman transaksi.</p><p>Selain itu, <code>analytics.js</code> ini tetap menggunakan kode <em>asynchronous</em>. Kode <em>asynchronous</em> merupakan jenis <em>script tracking</em> yang tidak membuat <em>loading web</em> menjadi lama. </p><p><strong>Kedua.</strong> Bagian selanjutnya terlihat seperti ini:</p><!--kg-card-begin: code--><pre><code>ga('create', 'UA-YYYYY-XX', 'namadomain.com');
+ga('send', 'pageview')
+&lt; /script &gt;;</code></pre><!--kg-card-end: code--><p>Secara teknis, kode script tersebut memiliki 2 action:</p><ul><li><em>Action 1</em>: Google Analytics menghubungkan tag ini dengan akun kita. Caranya, dengan menerapkan perintah <code>create</code>. </li><li><em>Action 2</em>: Setelah terhubung, <em>tracking object</em> akan mengirimkan setiap <em>data hit</em> dari web atau app ke server GA kita. <em>Data hits</em> yang dimaksud di sini yaitu <code>pageview</code>. <em>[FYI, pembahasan mengenai data hits sudah dibahas di halaman <a href="https://gtagjs.com/2018/07/06/basic-need-untuk-memahami-digital-analytics-data/">3 jenis data pada digital analytics</a>]</em></li></ul><!--kg-card-begin: hr--><hr><!--kg-card-end: hr--><h2 id="universal-analytics-cookies">Universal Analytics Cookies</h2><p>Soal tracking aktivitas audiens di web, cookies yang digunakan sama seperti GA sebelumnya, yaitu 1 cookie atau <em>first party cookie</em>. Dulu, GA pernah menerapkan 4 hingga 5 cookie. Efek negatifnya, <em>loading</em> situs menjadi lambat.</p><blockquote>Cookies yang kita maksud di sini bukan makanan, melainkan serangkaian teks yang disimpan pada komputer oleh situs web yang kita kunjungi. Sumber: <a href="https://support.mozilla.org/id/kb/Tentang%20Cookie#w_apa-cookie-itu">Mozilla</a></blockquote><p>UV menggunakan <em>first party cookie</em> yang bernama <code>_ga</code> dan terlihat seperti ini:</p><p><code>_ga=1.2.838838867.1359565579161</code> </p><p><em>Note: bisa jadi urutan angka akan berbeda pada cookie situs kita. Perbedaan ini terkustomisasi secara otomatis menyesuaikan web atau app kita.</em> </p><p>Secara teknis, cara kerja cooki sebagai berikut:</p><ul><li>Cookie akan mengidentifikasi identitas pengunjung web. Caranya, seluruh pengunjung akan digeneralisir sebagai <em>anonymous</em>, selanjutnya setiap pengunjung akan mendapat identitas baru berupa <em>random number</em> atau random <em>special character. </em>Selanjutnya, identitas "baru" tersebut akan disimpan pada cookie browser pengunjung.</li><li>Cookie yang berisi identitas "baru" pengunjung ini akan dikirim sepaket dengan data <em>hit</em> (berisi <code>sessions</code>, <code>visits</code>, <code>conversions</code>, <code>pages</code>, dan seterusnya) ke server GA. Pada akhirnya, paket tersebut akan dipergunakan untuk <em>calculate visits, visitors </em>dan<em> campaign metrics. </em></li></ul><p>Umumnya, cookie akan disimpan di browser pengunjung selama 2 tahun. Namun, durasi tersebut bisa kita ubah sesuai kebutuhan. Panduan mengenai cara mengubah durasi cookie bisa kita baca <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/cookies-user-id#expiration">di sini.</a></p><!--kg-card-begin: hr--><hr><!--kg-card-end: hr--><h2 id="universal-analytics-dan-gtm">Universal Analytics dan GTM</h2><p>Apa itu GTM? GTM adalah singkatan dari Google Tag Manager. Di kesempatan ini, kita mulai berkenalan dengan namanya Google Tag Manager, apa itu?</p><blockquote>Saya kutip dari blog <a href="https://medium.com/skyshidigital/google-tag-manager-tak-kenal-maka-tak-sayang-bagian-1-31f37a5a9e34">Andreas Wijaya</a>, Google Tag Manager merupakan fitur dari Google Analytics (GA) untuk membantu digital marketer me-manage tag. Caranya, GTM akan memetakan kebiasaan audiens di dalam web berdasarkan jenis tag-tag tertentu. Penjelasan lebih lengkap soal GTM akan saya tulis di artikel berikutnya.</blockquote><p>Terkait dengan UV, kita bisa pula mengimplementasikan UV ke dalam dashboard GTM. Caranya:</p><!--kg-card-begin: image--><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://gtagjs.com/content/images/2018/07/UA_GTMAndUA.png" class="kg-image"><figcaption>Cara menggunakan universal analytics ke dalam GTM</figcaption></figure><!--kg-card-end: image--><p>Satu hal yang perlu dicatat soal perubahan jenis analytic ini yaitu ia mampu mengukur beragam teknologi (beragam plarform dan device). Oleh sebab itu, di artikel berikutnya topik UV tidak jarang akan ikut terbahas. Dan, pembahasan soal cara menggunakan google analytics akan saya lanjutkan melalui artikel berikutnya. </p><p>Terima kasih, </p><p>Salam.</p><blockquote>Featured image by <a href="https://dribbble.com/Furmanczuk" rel="contact">Magda</a> </blockquote><p></p>
+                </div>
+            </section>
+
+            <footer class="post-full-footer" style="border: 1px solid #f9f9f9; padding: 20px; border-radius: 5px; background: #f9f9f9; display: none;">
+
+
+                    
+<section class="author-card">
+        <span class="avatar-wrapper"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"></path></g></svg>
+</span>
+    <section class="author-card-content">
+        <h4 class="author-card-name"><a href="../author/fathul/">Fathul Mundzir</a></h4>
+            <p>Creative Director | Chief Editor at GtagJS</p>
+    </section>
+</section>
+<div class="post-full-footer-right">
+    <a class="author-card-button" href="../author/fathul/">Read More</a>
+</div>
+
+
+            </footer>
+
+            <section class="post-full-comments">
+                <div id="disqus_thread" style="padding: 20px; border-radius: 3px; padding: 20px; border-radius: 5px; width: 80%; margin-left: 10%; border: 1px solid #edf4f8; margin-top: 20px;"></div>
+                <script>
+                var disqus_config = function () {
+                    this.page.url = "https://gtagjs.com/panduan-migrasi-dari-classic-analytics-ke-universal-analytics/";  
+                    this.page.identifier = "ghost-5b4153524aca440436d124a5"
+                };
+                (function() {
+                var d = document, s = d.createElement('script');
+                s.src = 'https://webanalis.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+                })();
+                </script>
+            </section>
+
+            <section class="subscribe-form">
+                <h3 class="subscribe-form-title">The Analytics Goes to Inbox</h3>
+                <p>Stay up to date with the latest news, tutorials and resources. All the best bits, delivered every Saturday.</p>
+                <form method="post" action="http://127.0.0.1:2368/subscribe/" id="" class="">
+    <input class="confirm" type="hidden" name="confirm"><input class="location" type="hidden" name="location"><input class="referrer" type="hidden" name="referrer">
+
+    <div class="form-group">
+        <input class="subscribe-email" type="email" name="email" placeholder="emailmu@gmail.com">
+    </div>
+    <button id="" class="" type="submit"><span>Subscribe</span></button>
+    
+<script>
+    (function(g,h,o,s,t){
+        var buster = function(b,m) {
+            h[o]('input.'+b).forEach(function (i) {
+                i.value=i.value || m;
+            });
+        };
+        buster('location', g.location.href);
+        buster('referrer', h.referrer);
+    })(window,document,'querySelectorAll','value');
+</script>
+
+</form>
+
+
+                <small style="display: block; margin: 10px 0 0; font-size: 1.2rem; line-height: 1.5em; font-weight: 600;">
+                    No marketing campaigns. No jibber jabber. Unsubscribe anytime.
+                </small>
+            </section>
+
+            <div class="post-full-footer" style="border: 1px solid #ffff; padding: 20px; border-radius: 5px; background: #fff; margin-top: 20px;">
+
+                
+<section class="author-card">
+        <span class="avatar-wrapper"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"></path></g></svg>
+</span>
+    <section class="author-card-content">
+        <h4 class="author-card-name"><a href="../author/fathul/">Fathul Mundzir</a></h4>
+            <p>Creative Director | Chief Editor at GtagJS</p>
+    </section>
+</section>
+<div class="post-full-footer-right">
+    <a class="author-card-button" href="../author/fathul/">Read More</a>
+</div>
+
+            </div>
+
+        </article>
+
+    </div>
+</main>
+
+<aside class="read-next outer">
+    <div class="inner">
+        <div class="read-next-feed">
+                <article class="read-next-card">
+                    <header class="read-next-card-header">
+                        <small class="read-next-card-header-sitetitle">— GtagJS —</small>
+                        <h3 class="read-next-card-header-title"><a href="../tag/tutorials/">Tutorials</a></h3>
+                    </header>
+                    <div class="read-next-divider"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13 14.5s2 3 5 3 5.5-2.463 5.5-5.5S21 6.5 18 6.5c-5 0-7 11-12 11C2.962 17.5.5 15.037.5 12S3 6.5 6 6.5s4.5 3.5 4.5 3.5"></path></svg>
+</div>
+                    <div class="read-next-card-content">
+                        <ul>
+                            <li><a href="../traffic-acquisition/">Tutorial traffic acquisition di google analytics</a></li>
+                            <li><a href="../channels-source-medium/">Google analytics: channels, source, medium</a></li>
+                            <li><a href="../channel-grouping/">Setting channel grouping: panduan teknis pengaturan di google analytics</a></li>
+                        </ul>
+                    </div>
+                    <footer class="read-next-card-footer">
+                        <a href="../tag/tutorials/">See all 6 posts →</a>
+                    </footer>
+                </article>
+
+                <article class="post-card post tag-resources tag-google-analytic ">
+
+    <a class="post-card-image-link" href="../otomatisasi-google-analytics/">
+        <img class="post-card-image" srcset="https://gtagjs.com/content/images/size/w300/2019/03/dribbble_invision_nw_report-2.png 300w,
+                    https://gtagjs.com/content/images/size/w600/2019/03/dribbble_invision_nw_report-2.png 600w,
+                    https://gtagjs.com/content/images/size/w1000/2019/03/dribbble_invision_nw_report-2.png 1000w,
+                    https://gtagjs.com/content/images/size/w2000/2019/03/dribbble_invision_nw_report-2.png 2000w" type="image/png" sizes="(max-width: 1000px) 400px, 700px" src="https://gtagjs.com/content/images/size/w600/2019/03/dribbble_invision_nw_report-2.png" alt="Kumpulan tools otomatisasi google analytics agar tidak membuat laporan manual setiap hari">
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="../otomatisasi-google-analytics/">
+
+            <header class="post-card-header">
+                    <span class="post-card-tags">Resources</span>
+                <h2 class="post-card-title">Kumpulan tools otomatisasi google analytics agar tidak membuat laporan manual setiap hari</h2>
+            </header>
+
+            <section class="post-card-excerpt" style="font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif; line-height: 17px; color: #999;">
+                <p>Kumpulan tips otomatisasi google analytic agar kita sempat mengerjakan task lain.</p>
+            </section>
+
+        </a>
+
+        <footer class="post-card-meta">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+
+                    <div class="author-name-tooltip">
+                        Fathul Mundzir
+                    </div>
+
+                        <a href="../author/fathul/" class="static-avatar author-profile-image"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"></path></g></svg>
+</a>
+                </li>
+            </ul>
+
+            <span class="reading-time">4 min read</span>
+
+        </footer>
+
+    </div>
+
+</article>
+
+                <article class="post-card post tag-tutorials tag-google-analytic ">
+
+    <a class="post-card-image-link" href="../content-grouping/">
+        <img class="post-card-image" srcset="https://gtagjs.com/content/images/size/w300/2019/03/4_2x-1.png 300w,
+                    https://gtagjs.com/content/images/size/w600/2019/03/4_2x-1.png 600w,
+                    https://gtagjs.com/content/images/size/w1000/2019/03/4_2x-1.png 1000w,
+                    https://gtagjs.com/content/images/size/w2000/2019/03/4_2x-1.png 2000w" type="image/png" sizes="(max-width: 1000px) 400px, 700px" src="https://gtagjs.com/content/images/size/w600/2019/03/4_2x-1.png" alt="Panduan setting content grouping di Google Analytics">
+    </a>
+
+    <div class="post-card-content">
+
+        <a class="post-card-content-link" href="../content-grouping/">
+
+            <header class="post-card-header">
+                    <span class="post-card-tags">Tutorials</span>
+                <h2 class="post-card-title">Panduan setting content grouping di Google Analytics</h2>
+            </header>
+
+            <section class="post-card-excerpt" style="font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif; line-height: 17px; color: #999;">
+                <p>Panduan lengkap cara setting content grouping di Google Analytics supaya data lebih mudah dipahami.</p>
+            </section>
+
+        </a>
+
+        <footer class="post-card-meta">
+
+            <ul class="author-list">
+                <li class="author-list-item">
+
+                    <div class="author-name-tooltip">
+                        Fathul Mundzir
+                    </div>
+
+                        <a href="../author/fathul/" class="static-avatar author-profile-image"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M3.513 18.998C4.749 15.504 8.082 13 12 13s7.251 2.504 8.487 5.998C18.47 21.442 15.417 23 12 23s-6.47-1.558-8.487-4.002zM12 12c2.21 0 4-2.79 4-5s-1.79-4-4-4-4 1.79-4 4 1.79 5 4 5z" fill="#FFF"></path></g></svg>
+</a>
+                </li>
+            </ul>
+
+            <span class="reading-time">5 min read</span>
+
+        </footer>
+
+    </div>
+
+</article>
+
+        </div>
+    </div>
+</aside>
+
+<div class="floating-header">
+    <div class="floating-header-logo">
+        <a href="https://gtagjs.com">
+            <span>GtagJS</span>
+        </a>
+    </div>
+    <span class="floating-header-divider">—</span>
+    <div class="floating-header-title">Tata cara migrasi dari classic analytics ke universal analytics</div>
+    <div class="floating-header-share">
+        <div class="floating-header-share-label">Share this <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24">
+    <path d="M7.5 15.5V4a1.5 1.5 0 1 1 3 0v4.5h2a1 1 0 0 1 1 1h2a1 1 0 0 1 1 1H18a1.5 1.5 0 0 1 1.5 1.5v3.099c0 .929-.13 1.854-.385 2.748L17.5 23.5h-9c-1.5-2-5.417-8.673-5.417-8.673a1.2 1.2 0 0 1 1.76-1.605L7.5 15.5zm6-6v2m-3-3.5v3.5m6-1v2"></path>
+</svg>
+</div>
+        <a class="floating-header-share-tw" href="https://twitter.com/share?text=Tata%20cara%20migrasi%20dari%20classic%20analytics%20ke%20universal%20analytics&amp;url=https://gtagjs.com/panduan-migrasi-dari-classic-analytics-ke-universal-analytics/" onclick="window.open(this.href, 'share-twitter', 'width=550,height=235');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"></path></svg>
+        </a>
+        <a class="floating-header-share-fb" href="https://www.facebook.com/sharer/sharer.php?u=https://gtagjs.com/panduan-migrasi-dari-classic-analytics-ke-universal-analytics/" onclick="window.open(this.href, 'share-facebook','width=580,height=296');return false;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"></path></svg>
+        </a>
+    </div>
+    <progress id="reading-progress" class="progress" value="0">
+        <div class="progress-container">
+            <span class="progress-bar"></span>
+        </div>
+    </progress>
+</div>
+
+
+
+
+        <footer class="site-footer outer">
+            <div class="site-footer-content inner">
+                <section class="copyright"><a href="https://gtagjs.com">GtagJS</a> © 2019</section>
+                <nav class="site-footer-nav">
+                    <a href="https://gtagjs.com">Latest Posts</a>
+                    
+                    
+                    <a href="https://ghost.org" target="_blank" rel="noopener" style="pointer-events: none;">Ghost</a>
+                </nav>
+            </div>
+        </footer>
+
+    </div>
+
+    <div id="subscribe" class="subscribe-overlay">
+        <a class="subscribe-overlay-close" href="index.html#"></a>
+        <div class="subscribe-overlay-content">
+                <img class="subscribe-overlay-logo" src="https://gtagjs.com/content/images/2019/03/99d9cc7667f91e05f58a0ada99ba2710.jpeg" alt="GtagJS">
+            <h1 class="subscribe-overlay-title">GtagJS Goes to Inbox</h1>
+            <p class="subscribe-overlay-description">Stay up to date with the latest news, tutorials and resources. All the best bits, delivered every Friday.</p>
+            <form method="post" action="http://127.0.0.1:2368/subscribe/" id="" class="">
+    <input class="confirm" type="hidden" name="confirm"><input class="location" type="hidden" name="location"><input class="referrer" type="hidden" name="referrer">
+
+    <div class="form-group">
+        <input class="subscribe-email" type="email" name="email" placeholder="emailmu@gmail.com">
+    </div>
+    <button id="" class="" type="submit"><span>Subscribe</span></button>
+    
+<script>
+    (function(g,h,o,s,t){
+        var buster = function(b,m) {
+            h[o]('input.'+b).forEach(function (i) {
+                i.value=i.value || m;
+            });
+        };
+        buster('location', g.location.href);
+        buster('referrer', h.referrer);
+    })(window,document,'querySelectorAll','value');
+</script>
+
+</form>
+
+
+        </div>
+    </div>
+
+    <script>
+        var images = document.querySelectorAll('.kg-gallery-image img');
+        images.forEach(function (image) {
+            var container = image.closest('.kg-gallery-image');
+            var width = image.attributes.width.value;
+            var height = image.attributes.height.value;
+            var ratio = width / height;
+            container.style.flex = ratio + ' 1 0%';
+        })
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="../assets/built/jquery.fitvids.js?v=f834a093d3"></script>
+
+
+    <script>
+
+// NOTE: Scroll performance is poor in Safari
+// - this appears to be due to the events firing much more slowly in Safari.
+//   Dropping the scroll event and using only a raf loop results in smoother
+//   scrolling but continuous processing even when not scrolling
+$(document).ready(function () {
+    // Start fitVids
+    var $postContent = $(".post-full-content");
+    $postContent.fitVids();
+    // End fitVids
+
+    var progressBar = document.querySelector('#reading-progress');
+    var header = document.querySelector('.floating-header');
+    var title = document.querySelector('.post-full-title');
+
+    var lastScrollY = window.scrollY;
+    var lastWindowHeight = window.innerHeight;
+    var lastDocumentHeight = $(document).height();
+    var ticking = false;
+
+    function onScroll() {
+        lastScrollY = window.scrollY;
+        requestTick();
+    }
+
+    function onResize() {
+        lastWindowHeight = window.innerHeight;
+        lastDocumentHeight = $(document).height();
+        requestTick();
+    }
+
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(update);
+        }
+        ticking = true;
+    }
+
+    function update() {
+        var trigger = title.getBoundingClientRect().top + window.scrollY;
+        var triggerOffset = title.offsetHeight + 35;
+        var progressMax = lastDocumentHeight - lastWindowHeight;
+
+        // show/hide floating header
+        if (lastScrollY >= trigger + triggerOffset) {
+            header.classList.add('floating-active');
+        } else {
+            header.classList.remove('floating-active');
+        }
+
+        progressBar.setAttribute('max', progressMax);
+        progressBar.setAttribute('value', lastScrollY);
+
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', onScroll, {passive: true});
+    window.addEventListener('resize', onResize, false);
+
+    update();
+
+});
+</script>
+
+
+    
+
+</body>
